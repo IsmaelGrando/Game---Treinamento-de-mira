@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinamento</title>
+
+    <link rel="stylesheet" href="estilo.css" />
+
+    <script src="jogo.js">
+
+
+    
+    </script>
+
+
+</head>
+<body onresize="ajustaTamanhoPalcoJogo()"> <!--desse jeito o valor vai ficar dinamico, e nao o absoluto possivel-->
+    
+    <div class="painel">
+        <div class="vidas">            
+            <img id="v1" src="imagens/coracao_cheio.png"/> <!--vamos modificar a origem da imagem para afetar os pontos de vida-->
+            <img id="v2" src="imagens/coracao_cheio.png"/>
+            <img id="v3" src="imagens/coracao_cheio.png"/>
+
+        </div>
+
+        <div class="cronometro">
+            Tempo restante: <span id="cronometro"></span>
+        </div>
+    </div>
+
+
+
+    <script>
+
+document.getElementById('cronometro').innerHTML = tempo //aqui eu deixo mais dinamico com essa inclusao, e assim o valor vai começar em 100, se eu modificar o tempo la no outro o valo muda aqui tbm
+        
+
+        //criando e removendo mosquitos a cada ciclo de tempo
+        var criaMosquito = setInterval(function () {
+            posicaoRandomica()
+        }, criaMosquitoTempo) //recupero o valor, tornando dinamico
+    </script>
+
+</body>
+</html>
